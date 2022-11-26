@@ -56,7 +56,6 @@
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile />
-      <AdditionalIncludeDirectories>$(SolutionDir)Submodules\DogFramework\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -70,7 +69,6 @@
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile />
-      <AdditionalIncludeDirectories>$(SolutionDir)Submodules\DogFramework\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -82,11 +80,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\DslDependingLib.cpp" />
+    <ClCompile Include="Source\DSLTests\Math\Int\IntMathCTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DogStandardLibrary\DogStandardLibrary.vcxproj">
       <Project>{e3b1ff4a-d8f5-4823-9968-7a3850e6d023}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\DSLTests\Math\Int\IntMathCTests.h" />
+    <ClInclude Include="Include\DSLTests\Math\Int\IntMathCustomTests.h" />
+    <ClInclude Include="Include\DSLTests\Math\Int\IntMathTests.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

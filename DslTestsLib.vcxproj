@@ -79,8 +79,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\DslDependingLib.cpp" />
-    <ClCompile Include="Source\DSLTests\Math\Int\IntMathCTests.cpp" />
+    <ClCompile Include="Source\dummy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DogStandardLibrary\DogStandardLibrary.vcxproj">

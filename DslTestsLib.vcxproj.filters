@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\DslDependingLib.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\DSLTests\Math\Int\IntMathCTests.cpp">
+    <ClCompile Include="Source\dummy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

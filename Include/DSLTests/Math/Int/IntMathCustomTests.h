@@ -1,28 +1,26 @@
 #pragma once
 #include "DSL/Math/Int/IntMathCustom.h"
-#include "DSL/Time/Stopwatch.h"
-
-#include <vector>
-#include <string>
-#include <typeinfo>
-#include <sstream>
+#include "DSL/DslTime.h"
+#include "DSL/DslDataStructures.h"
+#include "DSL/DslText.h"
 
 
-namespace dsl::math_custom::tests
+
+namespace dsl::tests::math_custom
 {
 	template<class T>
-	std::string absPerfTest(Int32 loopCount = 1000, Int32 arraySize = 1000)
+	String absPerfTest(Int32 loopCount = 1000, Int32 arraySize = 1000)
 	{
-		std::vector<dsl::Int64> measureValues(loopCount);
-		dsl::Stopwatch sw;
+		Vector<dsl::Int64> measureValues(loopCount);
+		Stopwatch sw;
 
 
 		for (int loop = 0; loop < loopCount; ++loop)
 		{
 			//Init array for calculations
-			std::vector<T> testV(arraySize);
+			Vector<T> testV(arraySize);
 
-			for (dsl::Int32 i = 0; i < arraySize; ++i)
+			for (Int32 i = 0; i < arraySize; ++i)
 			{
 				testV[i] = -static_cast<T>(i);
 			}
@@ -30,7 +28,7 @@ namespace dsl::math_custom::tests
 
 			sw.start();
 
-			for (dsl::Int32 i = 0; i < arraySize; ++i)
+			for (Int32 i = 0; i < arraySize; ++i)
 			{
 				testV[i] = dsl::math_custom::integer::abs(testV[i]);
 			}
@@ -43,20 +41,19 @@ namespace dsl::math_custom::tests
 		}
 
 		//Get result
-		dsl::Double avarage = 0;
+		Double avarage = 0;
 		for (auto i : measureValues)
 		{
 			avarage += i;
 		}
 		avarage = avarage / static_cast<dsl::Double>(loopCount);
 
-		std::stringstream resultText;
+		StringStream resultText;
 		resultText << "[math_custom]absPerfTest<" << typeid(T).name() 
-		<< ">\t(loopCount " << loopCount << " | arraySize " << arraySize <<")" << std::endl;
+		<< ">\t(loopCount " << loopCount << " | arraySize " << arraySize <<")\n";
 
 		resultText << "Avarage time in ticks : " << avarage <<
-			" (" << dsl::Stopwatch::Tick::toMilliseconds(static_cast<Int64>(avarage))<< "ms)" << std::endl;
-		resultText << std::endl;
+			" (" << dsl::Stopwatch::Tick::toMilliseconds(static_cast<Int64>(avarage))<< "ms)\n";
 
 		return resultText.str();
 	}

@@ -29,5 +29,8 @@
     <ClInclude Include="Include\DSLTests\Math\Int\IntMathTests.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Include\DSLTests\Common\BasicUtilities\BasicAllocationTests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\DSLTests\Common\BasicUtilities\BasicAllocationTests.h" />
+    <ClInclude Include="Include\DSLTests\DslTests.h" />
     <ClInclude Include="Include\DSLTests\Math\Int\IntMathCTests.h" />
     <ClInclude Include="Include\DSLTests\Math\Int\IntMathCustomTests.h" />
     <ClInclude Include="Include\DSLTests\Math\Int\IntMathTests.h" />

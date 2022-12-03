@@ -56,6 +56,7 @@
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile />
+      <AdditionalIncludeDirectories>$(SolutionDir)Submodules\DogFramework\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -69,6 +70,7 @@
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile />
+      <AdditionalIncludeDirectories>$(SolutionDir)Submodules\DogFramework\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -82,6 +84,9 @@
     <ClCompile Include="Source\dummy.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DogFrameworkLibrary\DogFrameworkLibrary.vcxproj">
+      <Project>{d2c03df7-55dd-463f-8318-0d2408c5d69e}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\DogStandardLibrary\DogStandardLibrary.vcxproj">
       <Project>{e3b1ff4a-d8f5-4823-9968-7a3850e6d023}</Project>
     </ProjectReference>

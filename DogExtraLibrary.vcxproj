@@ -16,7 +16,7 @@
     <ProjectGuid>{87fa8f71-3a46-4fc2-b24f-b212b606ed77}</ProjectGuid>
     <RootNamespace>DslTestsLib</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>DslTestsLib</ProjectName>
+    <ProjectName>DogExtraLibrary</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">

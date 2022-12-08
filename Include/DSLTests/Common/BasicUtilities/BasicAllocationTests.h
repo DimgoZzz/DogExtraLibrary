@@ -70,7 +70,7 @@ namespace dsl::tests
 			for (UInt64 j = 0; j < arraySize; ++j)
 			{
 				ptrArr1[j] = new A;
-				construct(ptrArr1[j]);
+				dConstruct(ptrArr1[j]);
 			}
 			sw.stop();
 			resArr1.push_back(static_cast<Int32>(sw.getTicksElapsed()));

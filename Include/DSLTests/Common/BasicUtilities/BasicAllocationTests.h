@@ -39,7 +39,7 @@ namespace dsl::tests
 		{
 			for (UInt64 j = 0; j < arraySize; ++j)
 			{
-				ptrArr2[j] = static_cast<A*>(dMalloc(sizeof(A)));
+				ptrArr2[j] = static_cast<A*>(AllocMemory(sizeof(A)));
 			}
 			for (UInt64 j = 0; j < arraySize; ++j)
 			{
@@ -52,7 +52,7 @@ namespace dsl::tests
 			sw.start();
 			for (UInt64 j = 0; j < arraySize; ++j)
 			{
-				ptrArr2[j] = static_cast<A*>(dMalloc(sizeof(A)));
+				ptrArr2[j] = static_cast<A*>(AllocMemory(sizeof(A)));
 				new(ptrArr2[j])A();
 			}
 			sw.stop();
@@ -70,7 +70,7 @@ namespace dsl::tests
 			for (UInt64 j = 0; j < arraySize; ++j)
 			{
 				ptrArr1[j] = new A;
-				dConstruct(ptrArr1[j]);
+				ConstructAt(ptrArr1[j]);
 			}
 			sw.stop();
 			resArr1.push_back(static_cast<Int32>(sw.getTicksElapsed()));

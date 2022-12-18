@@ -5,35 +5,30 @@
 #include "DSL/DslText.h"
 
 
-
-
 namespace dsl::tests::math_c
 {
+	//Benchmark for Int8/16/32/64/Float/Double of math_custom
 	template<class T>
-	String absPerfTest(Int32 loopCount = 1000, Int32 arraySize = 1000)
+	String absTest(Int32 loopCount = 1000, Int32 arraySize = 1000)
 	{
 		Vector<Int64> measureValues(loopCount);
 		Stopwatch sw;
 
+		Vector<T> testV(arraySize);
 
 		for (Int32 loop = 0; loop < loopCount; ++loop)
 		{
 			//Init array for calculations
-			Vector<T> testV(arraySize);
-
 			for (Int32 i = 0; i < arraySize; ++i)
 			{
-				testV[i] = -static_cast<T>(i);
+				testV[i] = -(static_cast<T>(i));
 			}
-			//End Init data for calculations
 
 			sw.start();
-
 			for (Int32 i = 0; i < arraySize; ++i)
 			{
 				testV[i] = dsl::math_c::integer::abs(testV[i]);
 			}
-
 			sw.stop();
 
 			measureValues.push_back(sw.getTicksElapsed());
@@ -43,14 +38,16 @@ namespace dsl::tests::math_c
 
 		//Get result
 		Double avarage = 0;
+		//Sum all results
 		for (auto i : measureValues)
 		{
 			avarage += i;
 		}
+		//Get avarage
 		avarage = avarage / static_cast<dsl::Double>(loopCount);
 
 		StringStream resultText;
-		resultText << "[math_c]absPerfTest<" << typeid(T).name()
+		resultText << "math_c::absTest<" << typeid(T).name()
 			<< ">\t(loopCount " << loopCount << " | arraySize " << arraySize << ")\n";
 
 		resultText << "Avarage time in ticks : " << avarage <<

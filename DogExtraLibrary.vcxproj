@@ -92,12 +92,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\DSLTests\Common\BasicUtilities\BasicAllocationTests.h" />
-    <ClInclude Include="Include\DSLTests\Containers\ContiguousListUniTests.h" />
-    <ClInclude Include="Include\DSLTests\DslTests.h" />
-    <ClInclude Include="Include\DSLTests\Math\Int\IntMathCTests.h" />
-    <ClInclude Include="Include\DSLTests\Math\Int\IntMathCustomTests.h" />
-    <ClInclude Include="Include\DSLTests\Math\Int\IntMathTests.h" />
+    <ClInclude Include="Include\DSL_Extra\Common\BasicUtilities\Test_BasicAllocation.h" />
+    <ClInclude Include="Include\DSL_Extra\DslTests.h" />
+    <ClInclude Include="Include\DSL_Extra\Math\Test_MathC_abs.h" />
+    <ClInclude Include="Include\DSL_Extra\Math\Test_MathCustom_abs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

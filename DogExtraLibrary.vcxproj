@@ -81,6 +81,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Include\DSL_Extra\Common\BasicUtilities\Test_BasicAllocation.ixx" />
+    <ClCompile Include="Include\DSL_Extra\DSL_E.Tests.ixx" />
     <ClCompile Include="Source\dummy.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -92,8 +94,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\DSL_Extra\Common\BasicUtilities\Test_BasicAllocation.h" />
-    <ClInclude Include="Include\DSL_Extra\DslTests.h" />
     <ClInclude Include="Include\DSL_Extra\Math\Test_MathC_abs.h" />
     <ClInclude Include="Include\DSL_Extra\Math\Test_MathCustom_abs.h" />
   </ItemGroup>
